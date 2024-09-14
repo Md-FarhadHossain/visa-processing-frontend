@@ -26,7 +26,7 @@ const UserInfo = () => {
                 { amount: 390, orderId: 1, payerReference: "hello@gmail.com" },
                 { withCredentials: true }
             );
-            
+
             window.location.href = data.bkashURL;
             console.log(data);
         } catch (error) {
@@ -54,12 +54,12 @@ const UserInfo = () => {
                                 {/* Name */}
                                 <div className="grid w-full max-w-sm items-center gap-1.5 mb-4">
                                     <Label htmlFor="user_name" className="">আপনার নাম লিখুন: </Label>
-                                    <Input required type="text" id="user_name" />
+                                    <Input required placeholder="01xxxxxxxxx" type="text" id="user_name" />
                                 </div>
                                 {/* Email */}
                                 <div className="grid w-full max-w-sm items-center gap-1.5">
                                     <Label htmlFor="email">আপনার ইমেইল লিখুন: </Label>
-                                    <Input required type="email" id="email" />
+                                    <Input required placeholder="exmple@mail.com" type="email" id="email" />
                                 </div>
 
                                 <div className=' text-right w-full pt-2 flex justify-between'>
@@ -69,6 +69,7 @@ const UserInfo = () => {
 
                                 <div className='w-full mt-4'>
                                     <Button
+                                        size="lg"
                                         type="submit"
                                         className={`w-full ${loading ? "" : "bg-[#e2136e]"}`}
                                         disabled={loading}
