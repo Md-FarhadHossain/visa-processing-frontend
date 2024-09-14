@@ -7,6 +7,7 @@ import axios from 'axios'
 import HowToPay from './HowToPay'
 
 import Illustration from '../app/bkash-icon.svg';
+import loadingicon from '../app/loading-icon.svg';
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -70,8 +71,9 @@ const UserInfo = () => {
                                     <Button
                                         type="submit"
                                         className="w-full bg-[#e2136e]"
+                                        disabled={loading}
                                     >
-                                        <span className='relative left-1'>{loading ? "" : "Order Now"} </span> {loading ? <svg className='w-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg> : <Image className='w-12 relative right-2' src={Illustration} />}
+                                        <span className='relative left-1'>{loading ? "" : "Order Now"} </span> {loading ? <Image className='w-10' src={loadingicon} /> : <Image className='w-12 relative right-2' src={Illustration} />}
                                     </Button>
                                 </div>
 
