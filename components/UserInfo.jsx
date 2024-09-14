@@ -39,7 +39,6 @@ const UserInfo = () => {
 
         <>
             <div>
-                {loading ? "true" : "false"}
                 <div className='flex lg:flex-row md:flex-col flex-col lg:gap-8 md:gap-8 gap-0 items-center'>
                     <div>
                         <HowToPay />
