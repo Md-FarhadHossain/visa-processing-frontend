@@ -1,13 +1,13 @@
+"use client"
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
 import React from 'react'
 
 const SuccessPage = () => {
-  return (
-    <div>SuccessPage ✅
+  const router = useRouter()
 
-      <Link href="https://www.google.com">click</Link>
-    </div>
-  )
+  return router.push('https://www.google.com/')
 }
 
 export default SuccessPage
