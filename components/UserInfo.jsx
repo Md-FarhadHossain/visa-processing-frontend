@@ -8,9 +8,12 @@ import HowToPay from './HowToPay'
 
 import Illustration from '../app/bkash-icon.svg';
 import Image from 'next/image'
+import { useState } from 'react'
 
 
 const UserInfo = () => {
+
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -18,13 +21,17 @@ const UserInfo = () => {
         try {
             const { data } = await axios.post(
                 "https://visa-processing-backend.vercel.app/api/bkash/payment/create",
-                { amount: 100, orderId: 1, payerReference: "hello@gmail.com" },
+                { amount: 390, orderId: 1, payerReference: "hello@gmail.com" },
                 { withCredentials: true }
             );
+            if(!data.bkashURL) {
+                setLoading(true)
+            }
             window.location.href = data.bkashURL;
             console.log(data);
         } catch (error) {
-            console.log(error.response.data);
+            // console.log(error.response.data);
+            console.log(error)
         }
     }
 
@@ -32,6 +39,7 @@ const UserInfo = () => {
 
         <>
             <div>
+                {loading ? "true" : "false"}
                 <div className='flex lg:flex-row md:flex-col flex-col lg:gap-8 md:gap-8 gap-0 items-center'>
                     <div>
                         <HowToPay />
