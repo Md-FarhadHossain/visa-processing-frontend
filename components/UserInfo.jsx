@@ -70,7 +70,7 @@ const UserInfo = () => {
                                 <div className='w-full mt-4'>
                                     <Button
                                         type="submit"
-                                        className="w-full bg-[#e2136e]"
+                                        className={`w-full ${loading ? "" : "bg-[#e2136e]"}`}
                                         disabled={loading}
                                     >
                                         <span className='relative left-1'>{loading ? "" : "Order Now"} </span> {loading ? <Image className='w-10' src={loadingicon} /> : <Image className='w-12 relative right-2' src={Illustration} />}
