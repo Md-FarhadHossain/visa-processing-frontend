@@ -43,7 +43,8 @@ const UserInfo = () => {
                     <div>
                         <HowToPay />
                     </div>
-                    <div className='lg:p-0 md:p-0 p-4 lg:w-[22rem] md:w-[22rem] w-full'>
+                    {/* Order card */}
+                    <div className='lg:p-0 md:p-0 pt-2 px-1 lg:w-[22rem] md:w-[22rem] w-full'>
                         <form onSubmit={handleSubmit} className='bg-white p-6  rounded-lg border shadow-md'>
                             <div>
                                 <div className='text-3xl text-black font-semibold mb-4'>অর্ডার করুন</div>
