@@ -17,6 +17,7 @@ const UserInfo = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
 
         try {
             const { data } = await axios.post(
@@ -24,9 +25,7 @@ const UserInfo = () => {
                 { amount: 390, orderId: 1, payerReference: "hello@gmail.com" },
                 { withCredentials: true }
             );
-            if(!data.bkashURL) {
-                setLoading(true)
-            }
+            
             window.location.href = data.bkashURL;
             console.log(data);
         } catch (error) {
