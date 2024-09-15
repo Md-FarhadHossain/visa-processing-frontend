@@ -23,7 +23,7 @@ const UserInfo = () => {
         try {
             const { data } = await axios.post(
                 "https://visa-processing-backend.vercel.app/api/bkash/payment/create",
-                { amount: 390, orderId: 1, payerReference: "hello@gmail.com" },
+                { amount: 1, orderId: 1, payerReference: "hello@gmail.com" },
                 { withCredentials: true }
             );
 
