@@ -23,7 +23,7 @@ const UserInfo = () => {
         const name = e.target.user_name.value
         const email = e.target.email.value
 
-        const data = {
+        const formData  = {
             name,
             email
         }
@@ -41,17 +41,19 @@ const UserInfo = () => {
         try {
             
 
-            const { data } = await axios.post(
+            const { data: response } = await axios.post(
                 "https://visa-processing-backend.vercel.app/api/bkash/payment/create",
-                { amount: 1, orderId: 1, payerReference: data },
+                { amount: 1, orderId: 1, payerReference: formData },
                 { withCredentials: true }
             );
 
-            window.location.href = data.bkashURL;
-            console.log(data);
+            window.location.href = response.bkashURL;
+            console.log(response);
         } catch (error) {
             // console.log(error.response.data);
             console.log(error)
+        } finally {
+            setLoading(false);
         }
     }
 
