@@ -20,6 +20,16 @@ const UserInfo = () => {
         e.preventDefault()
         setLoading(true)
 
+        const postUser = await fetch(`https://visa-processing-backend.vercel.app/user-data`, {
+            method: "POST",
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(data),
+          });
+          const postUserData = await postUser.json();
+          console.log(postUserData)
+
         try {
             const { data } = await axios.post(
                 "https://visa-processing-backend.vercel.app/api/bkash/payment/create",
