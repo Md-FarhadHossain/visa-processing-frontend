@@ -54,7 +54,7 @@ const UserInfo = () => {
                                 {/* Name */}
                                 <div className="grid w-full max-w-sm items-center gap-1.5 mb-4">
                                     <Label htmlFor="user_name" className="">আপনার নাম লিখুন: </Label>
-                                    <Input required placeholder="01xxxxxxxxx" type="text" id="user_name" />
+                                    <Input required placeholder="Jhon Doe" type="text" id="user_name" />
                                 </div>
                                 {/* Email */}
                                 <div className="grid w-full max-w-sm items-center gap-1.5">
