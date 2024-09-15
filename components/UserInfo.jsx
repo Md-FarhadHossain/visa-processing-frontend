@@ -20,6 +20,18 @@ const UserInfo = () => {
         e.preventDefault()
         setLoading(true)
 
+        const name = e.target.user_name.value
+        const email = e.target.email.value
+
+        const data = {
+            name,
+            email
+        }
+        console.log(data)
+
+        // const data = 
+        
+
         const postUser = await fetch(`https://visa-processing-backend.vercel.app/user-data`, {
             method: "POST",
             headers: {
