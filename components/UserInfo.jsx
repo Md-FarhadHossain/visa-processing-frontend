@@ -27,22 +27,20 @@ const UserInfo = () => {
             name,
             email
         }
-        console.log(data)
 
-        // const data = 
         
 
-        const postUser = await fetch(`https://visa-processing-backend.vercel.app/user-data`, {
-            method: "POST",
-            headers: {
-              'content-type': 'application/json'
-            },
-            body: JSON.stringify(data),
-          });
-          const postUserData = await postUser.json();
-          console.log(postUserData)
-
         try {
+            const postUser = await fetch(`https://visa-processing-backend.vercel.app/user-data`, {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            });
+            const postUserData = await postUser.json();
+            console.log(postUserData)
+            
             const { data } = await axios.post(
                 "https://visa-processing-backend.vercel.app/api/bkash/payment/create",
                 { amount: 1, orderId: 1, payerReference: "hello@gmail.com" },
