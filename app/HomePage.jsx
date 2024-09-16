@@ -3,6 +3,7 @@ import Image from 'next/image'
 import bannerImg from "../app/banner.jpg"
 import { PinRightIcon } from '@radix-ui/react-icons'
 import { CheckCircle } from 'lucide-react'
+import CountdownTimer from '@/components/CountdownTimer'
 
 const HomePage = () => {
 
@@ -63,7 +64,29 @@ const HomePage = () => {
         },
     ]
 
-    
+    const orderNowSec = [
+        {
+            label: "কোর্সের মান নিয়ে আপনি নিশ্চিন্ত থাকতে পারেন।"
+        },
+        {
+            label: "প্রিমিয়াম টেলিগ্রাম চ্যানেল"
+        },
+        {
+            label: "কোন অংশ ভাল করে না বুঝলে আপনি বার বার টেনে টেনে দেখার সুযোগ পাচ্ছেন।"
+        },
+        {
+            label: "কোর্সটি ধারাবাহিক পর্ব আকারে সাজানো এবং বাংলা ভাষায় তৈরি। তাই যে কেউ সহজে বুঝবে।"
+        },
+        {
+            label: "কোর্স শেষে ইনকাম কিভাবে করবেন সবকিছু ভিডিও দেওয়া আছে।"
+        },
+        {
+            label: "কোর্সটি পূর্ণাঙ্গ কোর্স, একদম নতুন থেকে শুরু করে এডভান্স লেভেল পর্যন্ত।"
+        },
+        {
+            label: "বাংলায় সবকিছু"
+        },
+    ]
 
     return (
         <>
@@ -109,7 +132,7 @@ const HomePage = () => {
                 </div>
 
                 {/* order now section */}
-                <div className='py-8 flex justify-between mx-16'>
+                <div className='py-8 flex justify-between mx-10 flex-row-reverse'>
 
                     <div className=''>
                         <Image className='w-max rounded' src={bannerImg} />
@@ -119,7 +142,7 @@ const HomePage = () => {
 
                         {/* content */}
                         <div>
-                            <div>{whatToLearnText.map(data => <div className='flex items-center gap-2 py-1 border-b border-green-400 even:bg-green-50 px-2' key={data.label}>
+                            <div>{orderNowSec.map(data => <div className='flex items-center gap-2 py-1 border-b border-green-400 even:bg-green-50 px-2' key={data.label}>
                                 <span className='text-green-600'><CheckCircle /></span>
                                 <span className='text-lg'>{data.label}</span>
 
@@ -127,6 +150,12 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* CountdownTimer */}
+                <CountdownTimer />
+
+                {/* যা যা জানা উচিত কিনার আগে */}
+                
 
             </div>
         </>
