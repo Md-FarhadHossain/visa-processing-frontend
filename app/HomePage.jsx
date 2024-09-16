@@ -88,6 +88,24 @@ const HomePage = () => {
         },
     ]
 
+    const needToKnow = [
+        {
+            label: "এই কোর্স গুলো বিভিন্ন পেইড ব্যাচের লাইভ রেকোর্ডেড"
+        },
+        {
+            label: "কোনো লাইভ সাপোর্ট থাকবে না"
+        },
+        {
+            label: "মোবাইল ফোন দিয়েও কাজ করতে পারবেন"
+        },
+        {
+            label: "কাজ করার প্রবল ইচ্ছা কিন্তু কোনো কোর্সে ভর্তি হতে পারছেন না। তারা এই কোম্বো প্যাকেজ টা ক্রয় করতে পারেন। কিন্তু ক্রয় করে বসে থাকলে কাজ হবেনা। অবশ্যই পরিশ্রমি হতে হবে।"
+        },
+        {
+            label: "অর্ডার করার পর সাথে সাথে আপনার ইমেইল এ এক্সেস পেয়ে যাবেন"
+        },
+    ]
+
     return (
         <>
             <div className=' container mx-auto'>
@@ -155,7 +173,26 @@ const HomePage = () => {
                 <CountdownTimer />
 
                 {/* যা যা জানা উচিত কিনার আগে */}
-                
+
+                <div className='py-8 flex justify-between mx-14'>
+
+                    <div className=''>
+                        <Image className='w-max rounded' src={bannerImg} />
+                    </div>
+                    <div className='w-1/2'>
+                        <div className='text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3'>যা যা জানা উচিত কিনার আগে</div>
+
+                        {/* content */}
+                        <div>
+                            <div>{needToKnow.map(data => <div className='flex items-center gap-2 py-1 border-b border-green-400 even:bg-green-50 px-2' key={data.label}>
+                                <span className='text-green-600'><CheckCircle /></span>
+                                <span className='text-lg'>{data.label}</span>
+
+                            </div>)}</div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </>
