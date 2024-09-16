@@ -24,7 +24,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 rounded-lg bg-green-50">
+    <div className="flex flex-col items-center justify-center py-12 rounded-lg bg-green-50">
       <h1 className="text-4xl font-bold mb-4 text-white bg-green-600 px-4 py-2 rounded-xl">অফার শেষ হতে বাকি আছে</h1>
       <div className="text-6xl font-mono bg-white p-8 rounded-lg shadow-lg">
         {formatTime(timeLeft)}

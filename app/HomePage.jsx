@@ -122,10 +122,10 @@ const HomePage = () => {
                 </div>
 
                 {/* Banner seciton */}
-                <div className='py-8 flex justify-between mx-16'>
+                <div className='py-16 flex justify-between mx-36'>
 
                     <div className=''>
-                        <Image className='w-max rounded' src={bannerImg} />
+                        <Image className='w-[40rem] rounded' src={bannerImg} />
                     </div>
                     <div>
                         <div className='text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3'>যা যা শিখবেন</div>
@@ -151,10 +151,10 @@ const HomePage = () => {
                 </div>
 
                 {/* order now section */}
-                <div className='py-8 flex justify-between mx-10 flex-row-reverse'>
+                <div className='py-8 flex justify-between mx-20 flex-row-reverse'>
 
                     <div className=''>
-                        <Image className='w-max rounded' src={bannerImg} />
+                        <Image className='w-[40rem] rounded' src={bannerImg} />
                     </div>
                     <div>
                         <div className='text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3'>কোর্সের বৈশিষ্ট্য</div>
@@ -175,10 +175,10 @@ const HomePage = () => {
 
                 {/* Need to know */}
 
-                <div className='py-8 flex justify-between mx-14'>
+                <div className='py-14 flex justify-between mx-14'>
 
                     <div className=''>
-                        <Image className='w-max rounded' src={bannerImg} />
+                        <Image className='w-[40rem] rounded' src={bannerImg} />
                     </div>
                     <div className='w-1/2'>
                         <div className='text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3'>যা যা জানা উচিত কিনার আগে</div>
