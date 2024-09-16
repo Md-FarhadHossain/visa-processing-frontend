@@ -219,7 +219,7 @@ const HomePage = () => {
 
             </div>
             {/* Footer */}
-            <footer>
+            <footer className='text-center font-sm font-medium font-mono mt-6 text-gray-700'>
                 Copyright &copy; 2024 Farhad Hossain
             </footer>
 
