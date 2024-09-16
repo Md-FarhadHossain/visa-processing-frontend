@@ -4,6 +4,7 @@ import bannerImg from "../app/banner.jpg"
 import { PinRightIcon } from '@radix-ui/react-icons'
 import { CheckCircle } from 'lucide-react'
 import CountdownTimer from '@/components/CountdownTimer'
+import OrderNow from './order-now/page'
 
 const HomePage = () => {
 
@@ -172,7 +173,7 @@ const HomePage = () => {
                 {/* CountdownTimer */}
                 <CountdownTimer />
 
-                {/* যা যা জানা উচিত কিনার আগে */}
+                {/* Need to know */}
 
                 <div className='py-8 flex justify-between mx-14'>
 
@@ -193,8 +194,35 @@ const HomePage = () => {
                     </div>
                 </div>
 
+                {/* What will get */}
+                <div className='bg-green-50 rounded-lg pb-8'>
+                    <div className='text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3'>কোর্স এর সাথে বোনাস হিসেবে পাবেন</div>
+                    <div>
+                        <div className='flex justify-center flex-col items-center gap-4'>
+                            <Image className='w-max rounded' src={bannerImg} />
+                            <Button className="bg-green-600 text-lg font-semibold" size="lg">অডার করতে চাই</Button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* Order now */}
+                <div className='bg-pink-50 rounded-lg mt-8 h-[90dvh]'>
+
+                    <div className='relative'>
+                        <OrderNow />
+                    </div>
+                </div>
+
+
 
             </div>
+            {/* Footer */}
+            <footer>
+                Copyright &copy; 2024 Farhad Hossain
+            </footer>
+
         </>
     )
 }
