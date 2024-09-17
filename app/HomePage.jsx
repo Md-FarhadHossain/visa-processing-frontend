@@ -138,7 +138,8 @@ const HomePage = () => {
         </div>
 
         {/* Banner seciton */}
-        <div className="py-16 flex justify-between mx-36">
+        <div className="py-16 flex justify-between lg:flex-row md:flex-col flex-col-reverse
+         lg:mx-36 md:mx-36 lg:px-0 md:px-0 px-3 gap-4">
           <div className="">
             <Image className="w-[40rem] rounded" src={bannerImg} />
           </div>
@@ -168,15 +169,15 @@ const HomePage = () => {
 
         {/* Video Section */}
         <div>
-          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3">
+          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3 lg:m-0 md:m-0 mx-3">
             ডেমো দেখতে ও বিস্তারিত জানতে নিচের ভিডিও টি দেখুন
           </div>
 
           <div className="flex justify-center">
             <iframe
-              className="rounded-md"
+              className="rounded-md lg:h-[315px] md:h-[315px] h-[14rem] lg:m-0 md:m-0 mx-3"
               width="560"
-              height="315"
+              // height="315"
               src="https://www.youtube.com/embed/etTie_ZN148?si=QZzfv-sk4XXmg6Dq"
               title="YouTube video player"
               frameBorder="0"
