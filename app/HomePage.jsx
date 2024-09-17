@@ -169,7 +169,7 @@ const HomePage = () => {
 
         {/* Video Section */}
         <div>
-          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3 lg:m-0 md:m-0 mx-3">
+          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3 lg:mx-0 md:mx-0 mx-3">
             ডেমো দেখতে ও বিস্তারিত জানতে নিচের ভিডিও টি দেখুন
           </div>
 
@@ -189,7 +189,8 @@ const HomePage = () => {
         </div>
 
         {/* order now section */}
-        <div className="py-8 flex justify-between mx-20 flex-row-reverse">
+        <div className="py-16 flex justify-between lg:flex-row md:flex-col flex-col-reverse
+         lg:mx-36 md:mx-36 lg:px-0 md:px-0 px-3 gap-4">
           <div className="">
             <Image className="w-[40rem] rounded" src={bannerImg} />
           </div>
@@ -222,11 +223,11 @@ const HomePage = () => {
 
         {/* Need to know */}
 
-        <div className="py-14 flex justify-between mx-14">
+        <div className="py-14 flex justify-between lg:mx-14 md:mx-14 mx-3 lg:flex-row md:flex-row flex-col-reverse">
           <div className="">
             <Image className="w-[40rem] rounded" src={bannerImg} />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2 md:w-1/2 w-full">
             <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3">
               যা যা জানা উচিত কিনার আগে
             </div>
@@ -252,15 +253,15 @@ const HomePage = () => {
 
         {/* What will get */}
         <div className="bg-green-50 rounded-lg pb-8">
-          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3">
+          <div className="text-3xl bg-green-900 text-white font-bold text-center py-2 rounded mb-3 lg:mx-0 md:mx-0 mx-3">
             কোর্স এর সাথে বোনাস হিসেবে পাবেন
           </div>
           <div>
-            <div className="flex justify-center flex-col items-center gap-4">
+            <div className="flex justify-center flex-col items-center gap-4 lg:m-0 md:m-0 mx-3">
               <Image className="w-max rounded" src={bannerImg} />
-              <Button className="bg-green-600 text-lg font-semibold" size="lg">
+              <Link href="/order-now"><Button className="bg-green-600 text-lg font-semibold h-14" size="lg">
                 অডার করতে চাই
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
@@ -273,7 +274,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Footer */}
-      <footer className="text-center font-sm font-medium font-mono mt-6 text-gray-700">
+      <footer className="text-center font-sm font-medium font-mono mt-6 mb-2 text-gray-700">
         Copyright &copy; 2024 Farhad Hossain
       </footer>
     </>
