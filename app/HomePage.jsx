@@ -5,6 +5,7 @@ import { PinRightIcon } from '@radix-ui/react-icons'
 import { CheckCircle } from 'lucide-react'
 import CountdownTimer from '@/components/CountdownTimer'
 import OrderNow from './order-now/page'
+import Link from 'next/link'
 
 const HomePage = () => {
 
@@ -112,12 +113,14 @@ const HomePage = () => {
             <div className=' container mx-auto'>
                 {/* Header */}
                 <div className='text-center w-fll flex mt-8 flex-col items-center py-8 gap-4 rounded-lg bg-blue-50'>
-                    <div className='text-3xl text-green-600 font-bold'>ইউটিউব ও ফেসবুক মনিটাইজেশন কোর্স</div>
-                    <div className='w-1/3'>এই কোর্সে করে আপনারা মোবাইল অথবা কম্পিউটার এর মাধ্যমে ফেসবুক পেইজ বা ইউটিউব চ্যানেল মাত্র তিন দিনের মধ্যে মনিটাইজ করতে পারবেন</div>
+                    <div className='text-5xl text-green-600 font-bold'>ইউটিউব ও ফেসবুক মনিটাইজেশন কোর্স</div>
+                    <div className='w-1/3 text-lg'>এই কোর্সে করে আপনারা মোবাইল অথবা কম্পিউটার এর মাধ্যমে ফেসবুক পেইজ বা ইউটিউব চ্যানেল মাত্র তিন দিনের মধ্যে মনিটাইজ করতে পারবেন</div>
                     <div className='text-2xl font-bold'>200$ মূল্যের কোর্স মাত্র</div>
                     <div className='text-3xl text-red-500 font-bold'>১৯৯ টাকা</div>
                     <div>
-                        <Button className="bg-green-600 text-lg font-semibold" size="lg">অডার করতে চাই</Button>
+                        <Link href="/order-now">
+                        <Button className="bg-green-600 text-lg h-14 font-semibold" size="lg">অডার করতে চাই</Button>
+                        </Link>
                     </div>
                 </div>
 
