@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import Image from 'next/image'
 import successIcon from "../../app/success-icon.svg"
@@ -36,7 +36,7 @@ const SuccessPage = () => {
         </div>
         
         {paymentDetails.map(data => (
-          <div key={data.label} className='flex justify-between items-center border-t py-1 even:bg-gray-100 px-4 hover:bg-gray-100'>
+          <div key={data.label} className='flex justify-between items-center border-t border-green-400 rounded-lg py-1 even:bg-green-50  px-4 hover:bg-gray-100'>
             <div>{data.label}</div>
             <div>{data.value}</div>
           </div>
