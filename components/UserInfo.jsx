@@ -23,21 +23,6 @@ const UserInfo = () => {
         const name = e.target.user_name.value
         const email = e.target.email.value
 
-        // const formData  = {
-        //     name,
-        //     email
-        // }
-
-        // const postUser = await fetch(`https://visa-processing-backend.vercel.app/user-payment-details`, {
-        //     method: "POST",
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data),
-        // });
-        // const postUserData = await postUser.json();
-        // console.log(postUserData)
-
         try {
             
 

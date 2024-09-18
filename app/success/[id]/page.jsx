@@ -2,6 +2,7 @@ import Image from "next/image";
 import successIcon from "../../../app/success-icon.svg";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
+import PrintBtn from "@/components/PrintBtn";
 
 const PDFDownloadButton = dynamic(
   () => import("../../../components/PDFDownloadButton"),
@@ -64,7 +65,7 @@ const TransId = async ({ params }) => {
   usersData.formattedDate = formattedDate;
 
   const paymentDetails = [
-    { label: "Payment ID", value: usersData.paymentID },
+    { label: "P.ID", value: usersData.paymentID },
     { label: "Trx ID", value: usersData.trxID },
     { label: "Date", value: usersData.formattedDate },
     { label: "Amount", value: usersData.amount },
@@ -81,7 +82,7 @@ const TransId = async ({ params }) => {
 
   return (
     <div className="bg-blue-500 h-[100dvh] flex justify-center items-center">
-      <div className="bg-white w-1/3 rounded-sm p-4">
+      <div className="bg-white lg:w-1/3 md:w-1/2 rounded-sm p-4 mx-3">
         <div className="flex items-center">
           <div>
             <Image src={successIcon} alt="Success Icon" />
@@ -94,7 +95,7 @@ const TransId = async ({ params }) => {
         {paymentDetails.map((data) => (
           <div
             key={data.label}
-            className="flex justify-between items-center border-t text-green-950 border-green-400 py-1 even:bg-green-50 px-4 hover:bg-green-100"
+            className="flex justify-between items-center border-t text-green-950 border-green-400 py-1 even:bg-green-50 lg:px-4 md:px-4 px-2 hover:bg-green-100"
           >
             <div>{data.label}</div>
             <div>{data.value}</div>
@@ -102,7 +103,7 @@ const TransId = async ({ params }) => {
         ))}
 
         <div className="flex justify-center mt-4 gap-3">
-          <Button className="bg-blue-500 rounded">Print</Button>
+          <PrintBtn />
           <PDFDownloadButton paymentDetails={paymentDetails} />
         </div>
       </div>
